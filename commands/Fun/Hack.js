@@ -17,7 +17,7 @@ module.exports = class extends Command {
     }
     async run(message, args) {
         let member = message.mentions.members.first() || this.client.users.cache.get(args[0]);
-        let randomPass = ["iloveshrek", "nissanr34", "toyotasupramk4"]
+        let randomPass = ["iloveshrek", "nissanr34", "toyotasupramk4", "isuck", "iaminlove", "lydiscord", "robloxsucks2222", ""]
         if (!member) return "I cant hack if u dont tell me who to hack"
         let msg = await message.channel.send(`Hacking ${member.user.tag}!`)
         let idk = Math.floor(Math.random() * randomPass.length)
@@ -33,14 +33,14 @@ module.exports = class extends Command {
         setTimeout(function () {
             message.channel.send(`Password ${randomPass[idk]}`)
         }, ms(time2))
-        setTimeout(function () {
-            message.channel.send(new MessageEmbed().setDescription(`MuHahahahha YOU`).setFooter(this.client.config["config"].copyright))
-        }, ms(time3))
-        setTimeout(function () {
-            message.channel.send(new MessageEmbed().setDescription(`HAVE BEEN`).setFooter(this.client.config["config"].copyright))
-        }, ms(time4))
-        setTimeout(function () {
-            message.channel.send(new MessageEmbed().setDescription(`HACKED`).setFooter(this.client.config["config"].copyright))
-        }, ms(time5))
+        // setTimeout(function () {
+        //     member.send(new MessageEmbed().setDescription(`MuHahahahha YOU`).setFooter(this.client.config["config"].copyright))
+        // }, ms(time3))
+        // setTimeout(function () {
+        //     member.send(new MessageEmbed().setDescription(`HAVE BEEN`).setFooter(this.client.config["config"].copyright))
+        // }, ms(time4))
+        // setTimeout(function () {
+        //     message.channel.send(new MessageEmbed().setDescription(`HACKED`).setFooter(this.client.config["config"].copyright))
+        // }, ms(time5))
     }
 };

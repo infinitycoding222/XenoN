@@ -16,6 +16,7 @@ module.exports = class extends Command {
     async run(message, args) {
         const NUMBER_REGEX = new RegExp(/(\d)(?=(\d{3})+(?!\d))/g)
         const country = args.join(" ")
+        if (!country) return message.channel.send(`Please provide a country name`)
         const res = await fetch(`https://corona.lmao.ninja/v2/countries/${country}`);
         const json = await res.json();
 

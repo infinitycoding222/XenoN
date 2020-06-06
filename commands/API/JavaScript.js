@@ -15,6 +15,7 @@ module.exports = class extends Command {
     }
     async run(message, args) {
         const query = args.join(" ")
+        if (!query) return message.channel.send(`Please provide a query`)
         const res = await fetch(`https://mdn.pleb.xyz/search?q=${encodeURIComponent(query)}`);
         const {
             Summary,

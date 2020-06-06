@@ -17,6 +17,6 @@ module.exports = class extends Command {
     }
     async run(message) {
         if (!message.channel.nsfw) return message.channel.send("Please run this command in a nsfw channel")
-        message.channel.send(`8${"=".repeat(Math.floor(Math.random() * 15))}D`);
+        message.channel.send(`\`8${"=".repeat(Math.floor(Math.random() * 15))}D\``);
     }
 };
